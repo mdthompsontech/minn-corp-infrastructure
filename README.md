@@ -6,7 +6,7 @@ Real infrastructure documentation from a self-hosted homelab — a production VP
 
 I run a small production stack (VPS, reverse proxy, Zero Trust tunnel, fail2ban, an AI coding agent used for host administration) and maintain a versioned baseline document as the single source of truth for its state. This repo is that document, with network identifiers replaced for safety — everything else, including the mistakes, is unedited.
 
-**[MASTER_BASELINE_v17.md](./MASTER_BASELINE_v17.md)** — the full infrastructure reference: architecture, security policy, operational procedures, open items, and a maintained incident history.
+**[SANITIZED_BASELINE_v17.md](./SANITIZED_BASELINE_v17.md)** — the full infrastructure reference: architecture, security policy, operational procedures, open items, and a maintained incident history.
 
 ## Why the incident history is the part worth reading
 
@@ -23,7 +23,7 @@ I'd rather show the near-misses and how they were caught than present a record w
 
 Three-document system:
 - **RULES** — a static preamble defining how an AI assistant should behave when helping administer this system: verification discipline, formatting conventions, security guardrails.
-- **MASTER_BASELINE** (this file) — the living state of the system. Versioned; each revision is a complete standalone replacement, never a patch, so there is always one unambiguous current truth.
+- **MASTER_BASELINE** — the living state of the system. Versioned; each revision is a complete standalone replacement, never a patch, so there is always one unambiguous current truth. The sanitized copy in this repo is that document.
 - **SESSION_LOG** — an append-only record of what happened in each working session and why.
 
 ## Sanitization
