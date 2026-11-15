@@ -1,0 +1,18 @@
+# Fail closed.
+#
+# This working tree holds RAW operational documents (device identifiers, build
+# fingerprints, credential paths, security posture). The remote is a PUBLIC
+# GitHub repository. Nothing here is publishable unless it has been sanitized.
+#
+# Therefore: ignore everything by default, and allow ONLY an explicit list.
+# A stray `git add .` must never be able to stage a raw document.
+
+*
+
+# --- explicitly publishable ---
+!.gitignore
+!README.md
+!SANITIZED_*.md
+
+# Note: files already tracked stay tracked regardless of this file, and
+# `git add -f` still overrides it. Neither should be used on a raw document.
