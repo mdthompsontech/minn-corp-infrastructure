@@ -8,6 +8,8 @@ I run a small production stack (VPS, reverse proxy, Zero Trust tunnel, fail2ban,
 
 **[SANITIZED_BASELINE_v17.md](./SANITIZED_BASELINE_v17.md)** — the full infrastructure reference: architecture, security policy, operational procedures, open items, and a maintained incident history.
 
+**[SANITIZED_KOMODO_SESSION_LOG_05.md](./SANITIZED_KOMODO_SESSION_LOG_05.md)** — a sample session log from a different corner of the same homelab: a rooted Android device administered over ADB. Narrower in scope than the baseline, but a clearer look at the moment-to-moment debugging this stack runs on — a spoofer module silently reading a config path that didn't exist, a backup tool misreporting its own output, a same-version module update that quietly changed behavior.
+
 ## Why the incident history is the part worth reading
 
 Section 13 of the baseline is a running list of things that went wrong, in the order they happened, each one tied to the rule it produced. A few examples:
@@ -24,7 +26,7 @@ I'd rather show the near-misses and how they were caught than present a record w
 Three-document system:
 - **RULES** — a static preamble defining how an AI assistant should behave when helping administer this system: verification discipline, formatting conventions, security guardrails.
 - **MASTER_BASELINE** — the living state of the system. Versioned; each revision is a complete standalone replacement, never a patch, so there is always one unambiguous current truth. The sanitized copy in this repo is that document.
-- **SESSION_LOG** — an append-only record of what happened in each working session and why.
+- **SESSION_LOG** — an append-only record of what happened in each working session and why. [One sanitized example is included here.](./SANITIZED_KOMODO_SESSION_LOG_05.md)
 
 ## Sanitization
 
